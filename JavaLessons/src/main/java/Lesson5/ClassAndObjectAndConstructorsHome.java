@@ -13,5 +13,6 @@ public class ClassAndObjectAndConstructorsHome {
         Employee emp2 = new Employee("arabxan");
         Employee emp3 = new Employee("Murad", "Verdizade");
         Employee emp4 = new Employee("Umid", "Sadigli", 4000);
+        System.out.println(emp2);
     }
 }
