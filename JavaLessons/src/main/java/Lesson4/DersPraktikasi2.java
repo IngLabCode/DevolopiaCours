@@ -79,12 +79,26 @@ public class DersPraktikasi2 {
             }
         }
 //        problem11
-        for (int ee = 2; ee < 10; ee++) {
-            for (int sade = 2; sade < 20; sade++) {
-                if (sade % sade != 0) {
-                    System.out.println(sade);
+        int a=20;
+        int count=0;
+        int b=2;
+        boolean sade;
+        while (count<a){
+            sade=true;
+            for (int i=2;i<b;i++){
+                if (b%i==0){
+                    sade=false;
+                    break;
                 }
+
             }
+            if (sade){
+                count++;
+                System.out.println("sade eded "+b);
+            }else{
+                System.out.println("eded sade deyil :"+b);
+            }
+            b++;
         }
 
 
