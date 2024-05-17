@@ -71,6 +71,23 @@ public class ArraysDemoHome {
             System.out.print(u);
         }
 
+        //how to find the simple numbers in array
+        for (int y:numbers){
+            if (simple(y)){
+                System.out.println(y);
+            }
+        }
+    }
+    static boolean simple(int eded){
+        boolean reslut=true;
+        for (int i = 2; i <eded ; i++) {
+            if (eded%i==0){
+                reslut=false;
+                break;
+            }
+        }
+        return reslut;
+
     }
 }
 
