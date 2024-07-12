@@ -13,7 +13,7 @@ public class HomeTask2 {
         LocalDate date2=LocalDate.now();
         System.out.println(date2.isBefore(date1));
         //3
-        LocalDate date3=LocalDate.of(2022,11,11);
+        LocalDate date3=LocalDate.now();
         LocalDate date4=date3.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
         System.out.println(date4);
         //4
@@ -31,6 +31,8 @@ public class HomeTask2 {
         LocalDateTime date10=LocalDateTime.parse(date9,format);
         System.out.println(date10);
         //8
+        System.out.println("bu");
+
         LocalTime date11Stop=LocalTime.now();
         LocalTime date12Start=LocalTime.of(12,12,12);
         Duration duration=Duration.between(date12Start,date11Stop);
