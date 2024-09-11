@@ -9,4 +9,5 @@ public interface BookService {
 
     BookFindAllListRespondDTO findAll();
 
+    void deleteById(Long id);
 }

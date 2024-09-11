@@ -42,5 +42,11 @@ public class BookServiceImpl implements BookService {
         return bookFindAllListRespondDTO;
     }
 
+    @Override
+    public void deleteById(Long id) {
+        BookEntity bookEntity = bookRepository.findById(id).orElseThrow(() -> new RuntimeException("id tapilmadi"));
+        bookRepository.deleteById(id);
+
+    }
 }
 
