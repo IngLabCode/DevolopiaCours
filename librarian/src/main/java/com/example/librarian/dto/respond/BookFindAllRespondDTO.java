@@ -7,5 +7,9 @@ import java.util.List;
 
 @Data
 public class BookFindAllRespondDTO {
-  private List<BookEntity> bookEntityList;
+  private Long id;
+  private String name;
+  private Integer pageCount;
+  private String author;
+  private String genre;
 }
