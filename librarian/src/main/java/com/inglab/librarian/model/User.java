@@ -19,14 +19,18 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "users",uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "firstname", nullable = false)
     private String firstname;
+    @Column(name = "lastname", nullable = false)
     private String lastname;
+    @Column(name = "email", nullable = false)
     private String email;
+    @Column(name = "password", nullable = false)
     private String password;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
@@ -45,9 +49,6 @@ public class User implements UserDetails {
                 .map(role -> new SimpleGrantedAuthority(role.name()))
                 .toList();
     }
-
-
-
 
 
     @Override
