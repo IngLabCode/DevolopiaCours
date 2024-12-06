@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+FROM openjdk:21-jdk
+COPY target/*.jar /app.jar
 LABEL authors="user"
 
-ENTRYPOINT ["top", "-b"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
